@@ -1,0 +1,180 @@
+@import './_variables';
+@import './_mixins';
+
+.search-box {
+    border: solid 1px #ddd;
+    border-radius: 50px;
+    padding: 0px 5px;
+    min-width: 5em;
+    position: relative;
+
+    input {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0 !important;
+        transition: width .3s linear !important;
+        border: none;
+        background: transparent;
+        outline:none!important;
+    }
+    input.expand-input-field {
+        width: 11em !important;
+        transition: width .3s linear !important;
+        padding-left: 0.6rem;
+        line-height: 36px;
+        border: 0px;
+        outline: none;
+        font-size: 14px;
+    }
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding: 0rem;
+        cursor: pointer;
+        opacity: 0.6;
+        transition:all 0.2s ease-in-out;
+
+        img {
+            width: 1.2rem;
+            vertical-align: middle;
+            display: inline-block;
+            padding: 0.5rem 0.7rem;
+            
+        }
+    }
+    a:hover{
+        opacity:1;
+    }
+    .search-close-btn{
+        display: inline-block;
+        vertical-align: middle;
+        cursor:pointer;
+
+        .material-icons{
+            color:#767776;
+        }
+    }
+
+}
+
+.filter-sec{
+    background-color:#ffffff;
+    padding:1.25rem 0rem;
+    box-shadow: 10px 4px 48px 2px rgba(184, 182, 184, 0.42);
+    min-height: 17rem;
+    width: 22rem;
+    position: absolute;
+    top:2.5rem;
+    right:0;
+    z-index: 3;
+
+    .filter-top-section{
+        padding:0rem 1.75rem 1rem;
+        margin-bottom: 0.5rem;
+        border-bottom: solid 1px #ddd;
+
+        h3{
+            font-size:17px;
+            font-weight:500;
+            line-height: 1;
+            color:#616167;
+            margin: 0px;
+        }
+        span{
+            color:#616167;
+            font-size:14px;
+            font-weight: 400;
+            line-height: 1;
+        }
+    }
+
+    .filter-bottom-section{
+        padding:0rem 0rem;
+        box-shadow: none;
+
+        .mat-expansion-panel{
+            box-shadow: none;
+            margin:0px;
+            margin-bottom: 0.5rem!important;
+
+            .mat-expansion-panel-header{
+                padding:0px 0.15rem;
+                position: relative;
+                margin: 0rem 1.75rem;
+                border-bottom: solid 1px #ddd;
+
+                .mat-content{
+                        text-transform: capitalize;
+                }
+            }
+
+            .mat-expansion-panel-content{
+                .mat-expansion-panel-body{
+                    position: absolute;
+                    right:100%;
+                    top:0px;
+                    background: #fff;
+                    min-height:17rem;
+                    width:100%;
+                    border-right: solid 5px #d01a47;
+                    padding: 1.25rem 1rem;
+                    box-shadow: 0px 0px 42px 0px rgba(184, 182, 184, 0.42);
+                }
+                
+            }
+
+        }
+        .mat-expanded.mat-expansion-panel-header{    background: rgba(0,0,0,.04);}
+        .mat-expansion-indicator{display:none;}
+            .mat-expanded .mat-expansion-panel-header:after{
+                content:"";
+                position: absolute;
+                left: -1.75rem;
+                top:50%;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-top: 6px solid transparent;
+                border-left: 10px solid #d01948;
+                border-bottom: 6px solid transparent;
+            }
+
+        
+    }
+
+    .filter-btn-sec{
+        padding:1rem 1.75rem 0rem;
+    }
+
+    .filter-sec-search-box{
+        border: solid 1px #ddd;
+        border-radius: 50px;
+        padding: 0px 5px;
+        min-width: 5em;
+        position: relative;
+        margin-bottom: 1rem;
+        position: relative;
+
+        input {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100% !important;
+            -webkit-transition: width .3s linear !important;
+            transition: width .3s linear !important;
+            border: none;
+            background: transparent;
+            line-height: 40px;
+            padding: 0rem 0.75rem;
+            outline:none;
+        }
+
+        a{
+            position: absolute;
+            right:0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+}

@@ -1,0 +1,35 @@
+@import './_variables';
+@import './_mixins';
+
+.mat-table{
+    @extend .offsetB2;
+
+    .mat-header-row{
+        border-top: solid 1px #ddd;
+        padding-right: 5px;
+
+        .mat-header-cell{
+            
+            &:nth-child(1){width:25%; flex: inherit;}
+            &:nth-child(2){width:35%; flex: inherit;}
+            &:nth-child(3){width:20%; flex: inherit;}
+            &:nth-child(4){width:14%; flex: inherit;}
+            &:nth-child(5){width:6%; flex: inherit; text-align: right;}
+        }
+    }
+    .mat-row{
+        cursor:pointer;
+        padding-right: 5px;
+
+        .mat-cell{
+
+            &:nth-child(1){width:25%; flex: inherit; color: $color-4d89f7; text-transform: capitalize; }
+            &:nth-child(2){width:35%; flex: inherit;}
+            &:nth-child(3){width:20%; flex: inherit; text-transform: capitalize;}
+            &:nth-child(4){width:14%; flex: inherit; /** text-align: center; background: #d0f2ca; border-radius: 3px; padding: 0.2rem 0rem; */}
+            &:nth-child(5){width:6%; flex: inherit; text-align: right;}
+        }
+
+    }
+}
+
